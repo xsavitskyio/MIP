@@ -3,6 +3,10 @@
 \documentclass[10pt,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{cite}
 %\usepackage[T1]{fontenc}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
@@ -15,7 +19,7 @@
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Recommendation systems on the labor market\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
 
 \author{Oleh Savytskyi\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -23,7 +27,15 @@
 	{\small \texttt{xsavitskyio@stuba.sk}}
 	}
 
-\date{\small 30. september 2015} % upravte
+	\begin{wrapfigure}{r}{0.3\textwidth} 
+		\centering
+		\vspace{-20pt}
+		\includegraphics[width=0.28\textwidth]{STU-FIIT-ancv.png}
+		\vspace{-20pt}
+	\end{wrapfigure}
+
+
+\date{\small 30. september 2024} % upravte
 
 
 
@@ -63,6 +75,8 @@ Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný pláva
 
 
 \section{Iná časť} \label{ina}
+
+
 
 Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
@@ -111,8 +125,41 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 
 
 
+
+
 \section{Záver} \label{zaver} % prípadne iný variant názvu
 
+\begin{figure*}[tbh]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+		\centering
+	
+		\includegraphics[width=0.8\textwidth]{collaborative.drawio.pdf}
+		\caption{collaborativefiltering}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\textwidth}
+		\centering
+	
+		\includegraphics[width=0.6\textwidth, angle=-20]{content-based.drawio.pdf}
+		\caption{content-based filtering}
+	\end{minipage}
+	\end{figure*}
+
+
+	\[
+\mathbf{A} = \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} & a_{14} & a_{15} \\
+    a_{21} & a_{22} & a_{23} & a_{24} & a_{25}\\
+    a_{31} & a_{32} & a_{33} & a_{34} & a_{35}\\
+    a_{41} & a_{42} & a_{43} & a_{44} & a_{45}\\
+    a_{51} & a_{52} & a_{53} & a_{54} & a_{55}
+\end{pmatrix}
+\]
+
+\[
+S_n = a_1 + {2!} \cdot a_2 + {3!} \cdot a_3 + {4!} \cdot a_4 + {5!} \cdot a_5 + {6!} \cdot a_6 + {7!} \cdot a_7 \dots + {n!} \cdot a_n
+\]
 
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
